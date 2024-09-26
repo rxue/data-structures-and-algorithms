@@ -1,15 +1,16 @@
 class Solution:
     def moveZeroes(self, nums: list[int]) -> None:
-        lastIdx = len(nums)-1
-        i = 0
-        while i < len(nums):
-            if i < lastIdx and nums[i] == 0:
-                for m in range(i, lastIdx):
-                    nums[m] = nums[m+1]
-                nums[lastIdx]  = 0
-                lastIdx = lastIdx - 1
+        nonZeros = []
+        zeros = []
+        for e in nums:
+            if e == 0:
+                zeros.append(e)
             else:
-                i = i + 1
+                nonZeros.append(e)
+        i = 0
+        for e in nonZeros + zeros:
+            nums[i] = e
+            i = i + 1
 
 def main():
     s = Solution()
