@@ -1,3 +1,4 @@
+# Reference Tutorial: https://www.youtube.com/watch?v=fPnQWeFlBCU&t=456s
 class Solution:
     def minCostClimbingStairs(self, cost: list[int]) -> int:
         minCost = []
