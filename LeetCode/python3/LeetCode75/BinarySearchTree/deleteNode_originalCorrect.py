@@ -9,48 +9,37 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def isLeaf(node:TreeNode) -> bool:
-    return node.left is None and node.right is None
-
 class Solution:
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+        if root is None:
+            return None
         predecessor, nodeToDelete = self._findWithPredecessor(None, root, key)
-        if nodeToDelete is None:
-            return root
-        elif predecessor is not None:
-            if isLeaf(nodeToDelete):
-                if predecessor.left == nodeToDelete:
-                    predecessor.left = None
-                elif predecessor.right == nodeToDelete:
-                    predecessor.right = None
-                return root
+        if nodeToDelete is not None:
+            if nodeToDelete.right is None:
+                nodeToDelete.right = nodeToDelete.left
             else:
-                rightResult = self._putToLeftMost(nodeToDelete.left, nodeToDelete.right)
+                self._putToLeftMost(nodeToDelete.left, nodeToDelete.right)
+            if predecessor is not None:
                 if predecessor.left == nodeToDelete:
-                    predecessor.left = rightResult
-                    return root
+                    predecessor.left = nodeToDelete.right
                 elif predecessor.right == nodeToDelete:
-                    predecessor.right = rightResult
-                    return root
-
-    
-        else: # no predecessor, i.e. found from the root
-            result = self._putToLeftMost(nodeToDelete.left, nodeToDelete.right)
-            return result
-    
-    def _putToLeftMost(self, node:TreeNode, target:TreeNode) -> TreeNode:
+                    predecessor.right = nodeToDelete.right
+                
+        if predecessor is None and nodeToDelete is not None: 
+            if nodeToDelete.left is None and nodeToDelete.right is None:
+                return None
+            elif nodeToDelete.left is not None and nodeToDelete.right is None:
+                return nodeToDelete.left
+            else:
+                return nodeToDelete.right
+        return root
+    def _putToLeftMost(self, node:TreeNode, target:TreeNode):
         current = target
         while current is not None and current.left is not None:
             current = current.left
-        if current is not None:
-            current.left = node 
-        elif node is not None:
-            target = node    
-        return target       
+        current.left = node            
 
     def _findWithPredecessor(self, predecessor:TreeNode, fromNode:TreeNode, val:int):
-        if fromNode is None:
-            return None, None
         if fromNode.val == val:
             return predecessor, fromNode
         elif fromNode.left == None and fromNode.right == None:
@@ -64,8 +53,8 @@ class Solution:
 def main():
     s = Solution()
     gen = TreeGenerator()
-    nums = [4,None,7,6,8,5,None,None,9]
-    result = s.deleteNode(gen.generateBinaryTree(nums), 7)
+    nums = [2,1]
+    result = s.deleteNode(gen.generateBinaryTree(nums), 1)
     nums = [3,2,4,1]
     result = s.deleteNode(gen.generateBinaryTree(nums), 2)
     nums = [2,1]
