@@ -1,6 +1,8 @@
 [project]
-name = "aata-analysis-with-python-2025-2025"
+name = "data-analysis-with-python-2025-2025"
 version = "0.1.0"
+requires-python = ">=3.13"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
