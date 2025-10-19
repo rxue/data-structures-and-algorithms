@@ -1,0 +1,6 @@
+[project]
+name = "aata-analysis-with-python-2025-2025"
+version = "0.1.0"
+
+[tool.setuptools.packages.find]
+where = ["src"]
