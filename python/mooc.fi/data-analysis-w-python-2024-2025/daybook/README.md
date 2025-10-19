@@ -1,5 +1,10 @@
 # 20251018
 ## Problem: After intializing the project, `python3 -m unittest test_ex_1_9_merge` encountered error
 ![Error stack](https://private-user-images.githubusercontent.com/3033388/502826036-045b985f-69dd-44b7-9468-be405820d0ef.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjA3NjU4ODEsIm5iZiI6MTc2MDc2NTU4MSwicGF0aCI6Ii8zMDMzMzg4LzUwMjgyNjAzNi0wNDViOTg1Zi02OWRkLTQ0YjctOTQ2OC1iZTQwNTgyMGQwZWYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MTAxOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTEwMThUMDUzMzAxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzJiNjNhM2M1Y2QwOTBkMWI3YzA4YzEwNDNmMjkxYjgxNzgyZTZkNzY0ZjExNWExODMyN2RkYmNkNzRlMmFjOCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.1D9IRKroCaT-2kDEmVQyhbeDA0SHGkcfybnpXzO5TTg)
+# 20251019
+> The ensurepip module was added to the Python standard library in Python 3.4.
+reference: https://pip.pypa.io/en/stable/installation/
+
+Statement above means that `pip` is in the Python standard libary since Python 3.4
 
 
