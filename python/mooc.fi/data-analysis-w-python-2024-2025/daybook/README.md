@@ -7,4 +7,6 @@ reference: https://pip.pypa.io/en/stable/installation/
 
 Statement above means that `pip` is in the Python standard libary since Python 3.4
 
+## PyCharm: *Mark Directory as* > *Test Sources Root*
+
 
