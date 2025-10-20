@@ -12,4 +12,25 @@ def merge(L1:list[int], L2:list[int]) -> list[int]:
     :param L2:
     :return: sorted merged list of L1 and L2
     """
-    pass
+    idx1 = idx2 = 0
+    result = []
+    while idx1 < len(L1) or idx2 < len(L2):
+        if idx1 <len(L1) and idx2 <len(L2):
+            if L1[idx1] < L2[idx2]:
+                result.append(L1[idx1])
+                idx1 += 1
+            elif L2[idx2] < L1[idx1]:
+                result.append(L2[idx2])
+                idx2 += 1
+            else:
+                result.append(L1[idx1])
+                idx1 += 1
+                result.append(L2[idx2])
+                idx2 += 1
+        elif idx1 == len(L1) and idx2 < len(L2):
+            result.append(L2[idx2])
+            idx2 += 1
+        elif idx2 == len(L2) and idx1 < len(L1):
+            result.append(L1[idx1])
+            idx1 += 1
+    return result
