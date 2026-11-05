@@ -1,13 +1,12 @@
 package io.github.rxue.easy;
 
-import easy.MergeSortedArray;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class MergeSortedArrayTest {
+class MergeSortedArrayTest {
     @Test
     public void base() {
         int[] nums1 = {1,2,3,0,0,0};

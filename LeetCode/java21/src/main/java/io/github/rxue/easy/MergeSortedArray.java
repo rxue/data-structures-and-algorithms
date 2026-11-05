@@ -1,4 +1,4 @@
-package easy;
+package io.github.rxue.easy;
 
 import java.util.Arrays;
 

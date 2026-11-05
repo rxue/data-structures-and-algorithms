@@ -1,4 +1,4 @@
-package easy;
+package io.github.rxue.easy;
 
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {

@@ -1,4 +1,4 @@
-package medium;
+package io.github.rxue.medium;
 
  class ListNode {
       int val;
