@@ -1,5 +1,6 @@
 package io.github.rxue.easy;
 
+import io.github.rxue.arraystring.easy.MergeSortedArray;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

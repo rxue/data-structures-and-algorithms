@@ -1,4 +1,4 @@
-package io.github.rxue.easy;
+package io.github.rxue.hashmap;
 
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {

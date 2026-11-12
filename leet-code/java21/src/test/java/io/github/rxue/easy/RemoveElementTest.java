@@ -1,5 +1,6 @@
 package io.github.rxue.easy;
 
+import io.github.rxue.arraystring.easy.RemoveElement;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
