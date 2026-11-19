@@ -1,6 +1,5 @@
 package io.github.rxue.intervals.easy;
 
-import io.github.rxue.intervals.easy.Solution;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
