@@ -6,3 +6,6 @@
 ## Easy
 ### Summary Ranges
 https://www.youtube.com/watch?v=TO_uABoo-5c
+## Medium
+### Merge 20261121
+Key to solve the question: sort the array before merge
