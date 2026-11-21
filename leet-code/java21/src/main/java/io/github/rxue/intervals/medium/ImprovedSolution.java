@@ -9,9 +9,9 @@ class ImprovedSolution {
         int[] lastInterval = intervals[0];
         List<int[]> result = new ArrayList<>();
         for (int i = 1; i < intervals.length; i++) {
-            Optional<int[]> merged = orderedMerge(lastInterval, intervals[i]);
-            if (merged.isPresent()) {
-                lastInterval = merged.get();
+            int[] merged = merge(lastInterval, intervals[i]);
+            if (merged != lastInterval) {
+                lastInterval = merged;
             } else {
                 result.add(lastInterval);
                 lastInterval = intervals[i];
@@ -20,10 +20,10 @@ class ImprovedSolution {
         result.add(lastInterval);
         return result.toArray(new int[0][]);
     }
-    private static Optional<int[]> orderedMerge(int[] intervalLeft, int[] intervalRight) {
+    private static int[] merge(int[] intervalLeft, int[] intervalRight) {
         if (intervalLeft[1] >= intervalRight[0]) {
-            return Optional.of(new int[]{intervalLeft[0], Math.max(intervalLeft[1],intervalRight[1])});
+            return new int[]{intervalLeft[0], Math.max(intervalLeft[1],intervalRight[1])};
         }
-        return Optional.empty();
+        return intervalLeft;
     }
 }
