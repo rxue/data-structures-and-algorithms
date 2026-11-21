@@ -2,7 +2,7 @@ package io.github.rxue.intervals.medium;
 
 import java.util.*;
 
-class Solution {
+class OwnSolution {
     public int[][] merge(int[][] intervals) {
         if (intervals.length <=1) return intervals;
         Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
