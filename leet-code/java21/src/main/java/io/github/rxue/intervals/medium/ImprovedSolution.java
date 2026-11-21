@@ -44,20 +44,17 @@ class ImprovedSolution {
                 else
                     mergeResult = tryMerge(mergedInterval, currentInterval);
                 if (mergeResult == null) {//merge failure
-                    if (currentInterval[0] < mergedInterval[0]) {
-                        result.add(currentInterval);
-                    } else {
+                    if (currentInterval[0] >= mergedInterval[0]) {
                         result.add(mergedInterval);
-                        result.add(currentInterval);
                         mergedInterval = null;
                     }
+                    result.add(currentInterval);
                 } else {
                     mergedInterval = mergeResult;
                 }
             }
         }
-        if (mergedInterval != null)
-            result.add(mergedInterval);
+        if (mergedInterval != null)  result.add(mergedInterval);
         return result.toArray(new int[0][]);
     }
     private static int[] tryMerge(int[] leftInterval, int[] rightInterval) {
